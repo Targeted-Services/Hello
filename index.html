@@ -1,105 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What We Do | Targeted.Services</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .container {
-            padding: 20px;
-        }
-        h1, h2 {
-            color: #4CAF50;
-        }
-        .service {
-            margin-bottom: 20px;
-        }
-        .cta {
-            text-align: center;
-            margin: 40px 0;
-        }
-        .cta button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            font-size: 18px;
-            cursor: pointer;
-        }
-        .cta button:hover {
-            background-color: #45a049;
-        }
-        footer {
-            background-color: #f1f1f1;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
-</head>
-<body>
-
-<header>
-    <h1>What We Do at Targeted.Services</h1>
-</header>
-
-<div class="container">
-    <h2>Our Mission</h2>
-    <p>At Targeted.Services, we specialize in delivering tailored solutions that empower businesses to thrive in today’s competitive landscape. Our goal is to make your challenges our priority and provide targeted strategies that drive measurable success.</p>
-
-    <h2>Our Core Services</h2>
-
-    <div class="service">
-        <h3>1. Digital Marketing Solutions</h3>
-        <p>We craft bespoke marketing strategies, leveraging data-driven insights to boost your online presence, attract targeted audiences, and achieve higher conversions.</p>
-    </div>
-
-    <div class="service">
-        <h3>2. Business Optimization</h3>
-        <p>Streamline operations and maximize efficiency with our tailored optimization strategies, designed to suit your unique business needs.</p>
-    </div>
-
-    <div class="service">
-        <h3>3. Web Development</h3>
-        <p>Our expert team creates user-centric websites that are not only visually appealing but also optimized for performance and functionality.</p>
-    </div>
-
-    <div class="service">
-        <h3>4. Analytics and Insights</h3>
-        <p>Turn raw data into actionable insights with our advanced analytics services, helping you make informed decisions that drive growth.</p>
-    </div>
-
-    <h2>Why Choose Us?</h2>
-    <ul>
-        <li>Personalized service tailored to your business goals</li>
-        <li>Proven expertise across various industries</li>
-        <li>Dedicated support from start to finish</li>
-        <li>Innovative solutions designed for results</li>
-    </ul>
-
-    <div class="cta">
-        <p>Ready to take your business to the next level?</p>
-        <button onclick="window.location.href='contact.html'">Get in Touch</button>
-    </div>
-</div>
-
-<footer>
-    <p>&copy; 2024 Targeted.Services. All Rights Reserved.</p>
-</footer>
-
-</body>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Targeted.Services</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css">
+      <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+   </head>
+   <body>
+      <header class="text-gray-700 body-font border-b border-gray-200">
+         <div class="container mx-auto flex flex-wrap p-5 items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 sm:mb-0" href="https://targeted.services">
+               <img src="assets/images/logo.png" alt="Logo" class="w-10 h-10 mr-3">
+               <span class="text-xl font-semibold">Targeted<span id="highlight">.</span>Services</span>
+            </a>
+            <button class="ml-auto bg-gray-200 py-1 px-3 rounded sm:hidden focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+               </svg>
+            </button>
+            <nav id="mobile-menu" class="hidden sm:flex flex-col sm:flex-row items-center sm:ml-auto text-base">
+               <a href="https://targetedservices.zohodesk.eu/portal/en/home" class="mr-5 hover:text-gray-900">Help Center</a>
+               <a href="https://targeted.zcrmportals.eu/portal/targeted/crm/login.sas" class="bg-gray-200 py-1 px-3 rounded hover:bg-gray-300">Customer Area</a>
+            </nav>
+         </div>
+      </header>
+      <section class="text-gray-700 body-font">
+         <div class="container mx-auto flex flex-col-reverse sm:flex-row px-5 py-12 sm:py-24 items-center">
+            <div class="flex-grow sm:w-1/2 flex flex-col items-center sm:items-start text-center sm:text-left">
+               <h1 class="title-font text-3xl sm:text-5xl mb-4 font-medium text-gray-900">
+                  Marketing revolution.<br class="hidden sm:block">Unlimited success ✌️
+               </h1>
+               <p class="mb-8 leading-relaxed text-lg">
+                  Join us in revolutionizing your marketing strategies for <br class="hidden sm:block">unlimited success. Let's achieve your goals together.
+               </p>
+               <ul class="mb-8 space-y-2">
+                  <li class="flex items-center">
+                     <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                     </svg>
+                     Customized marketing plans tailored to your needs
+                  </li>
+                  <li class="flex items-center">
+                     <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                     </svg>
+                     Real-time analytics and performance tracking
+                  </li>
+                  <li class="flex items-center">
+                     <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                     </svg>
+                     Expert support and guidance every step of the way
+                  </li>
+               </ul>
+               <button class="bg-indigo-500 text-white py-2 px-6 rounded hover:bg-indigo-600" onclick="window.open('https://crm.targeted.services/bookings/30minutesmeeting?rid=237532d83af0116b90076167d7b2a072d8170b7902ee4b46a6252ef26f4cc427844f61721106c28eef71be19c0bb5a27gidfc2266bd0f502821e11abdeaaa5c28c6a6c1daa2756f12d45f4101adabf75dda', '_blank')">
+                  Free consultation
+               </button>
+            </div>
+            <div class="sm:w-1/2 w-full mb-8 sm:mb-0">
+               <img class="object-cover object-center rounded" alt="hero" src="assets/images/header-illustration.svg">
+            </div>
+         </div>
+      </section>
+      <footer class="text-gray-700 body-font">
+         <div class="bg-gray-200 py-4">
+            <div class="container mx-auto flex flex-col sm:flex-row items-center">
+               <p class="text-gray-500 text-sm text-center sm:text-left">© 2024 Targeted Services —
+                  <a href="https://targeted.services" class="text-gray-600 ml-1" target="_blank" rel="noopener noreferrer">@targetedservices</a>
+               </p>
+               <span class="sm:ml-auto text-sm text-gray-500 text-center sm:text-left">Unlock your business's full potential with our comprehensive suite of services.</span>
+            </div>
+         </div>
+      </footer>
+   </body>
 </html>
