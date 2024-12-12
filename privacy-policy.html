@@ -19,6 +19,15 @@
          h1, h2, .title-font {
             font-family: 'Roboto', sans-serif;
          }
+
+         .footer-links-icons {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+         }
+         .footer-links-icons img {
+            vertical-align: middle;
+         }
       </style>
    </head>
    <body class="flex flex-col min-h-screen">
@@ -46,20 +55,20 @@
             </div>
          </section>
       </main>
-      <footer class="text-gray-700 body-font bg-gray-200 py-4 fixed bottom-0 w-full">
-        <div class="container mx-auto flex flex-col sm:flex-row items-center">
-           <p class="text-gray-500 text-sm text-center sm:text-left">© 2024 Targeted Services —
-              <a href="https://www.targeted.services" class="text-gray-600 ml-1" target="_blank" rel="noopener noreferrer">@targetedservices</a>
-           </p>
-           <span class="sm:ml-auto flex space-x-4 mt-4 sm:mt-0">
-              <a href="https://www.facebook.com/profile.php?id=61564970068571" target="_blank" rel="noopener noreferrer">
-                 <img src="assets/icons/facebook.svg" alt="Facebook" class="w-6 h-6">
-              </a>
-              <a href="https://www.instagram.com/targetedservices" target="_blank" rel="noopener noreferrer">
-                 <img src="assets/icons/instagram.svg" alt="Instagram" class="w-6 h-6">
-              </a>
-           </span>
-        </div>
-     </footer>
+      <footer class="text-gray-700 body-font bg-gray-200 py-4">
+         <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between">
+            <p class="text-gray-500 text-center sm:text-left">© 2024 Targeted Services </p>
+            <div class="footer-links-icons">
+               <a href="/privacy-policy.html" class="text-gray-600 hover:text-indigo-600">Privacy Policy</a>
+               <a href="/terms-and-conditions.html" class="text-gray-600 hover:text-indigo-600">Terms & Conditions</a>
+               <a href="https://www.facebook.com/profile.php?id=61564970068571" target="_blank" rel="noopener noreferrer">
+                  <img src="assets/icons/facebook.svg" alt="Facebook" class="w-6 h-6">
+               </a>
+               <a href="https://www.instagram.com/targetedservices" target="_blank" rel="noopener noreferrer">
+                  <img src="assets/icons/instagram.svg" alt="Instagram" class="w-6 h-6">
+               </a>
+            </div>
+         </div>
+      </footer>
    </body>
 </html>
