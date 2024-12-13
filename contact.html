@@ -116,6 +116,25 @@
                      </iframe>
                   </div>
                   <div>
+                     <script src='https://www.google.com/recaptcha/api.js'></script>
+                        <script>
+
+                        function get_action(form) 
+                        {
+                           var v = grecaptcha.getResponse();
+                           if(v.length == 0)
+                           {
+                              document.getElementById('captcha').innerHTML="You can't leave Captcha Code empty";
+                              return false;
+                           }
+                           else
+                           {
+                                 document.getElementById('captcha').innerHTML="Captcha completed";
+                              return true; 
+                           }
+                        }
+
+                        </script>
                      <!-- Insert Zoho Webform Code Here -->
                      <div id='crmWebToEntityForm' class='zcwf_lblLeft crmWebToEntityForm'>
                         <form id='webform733929000000446083' action='https://crm.zoho.eu/crm/WebToLeadForm' name='WebToLeads733929000000446083' method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory733929000000446083()' accept-charset='UTF-8'>
@@ -161,6 +180,8 @@
                               <p> <label class="" for='privacyTool'>I agree to the <b><a href="privacy-policy.html">privacy policy</a></b>.</label>
                           </p> </div>
                            <div class='zcwf_row'>
+                              <div class="g-recaptcha" id="rcaptcha"  data-sitekey="6Lf6W5oqAAAAAFGHcU2kRiEG_IZGROIOEdzB-VZ7"></div>
+                              <span id="captcha" style="color:red" /></span> <!-- this will show captcha errors -->
                               <button type='submit' class='formsubmit'>Submit</button>
                            </div>
 
