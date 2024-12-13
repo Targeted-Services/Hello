@@ -116,25 +116,7 @@
                      </iframe>
                   </div>
                   <div>
-                     <script src="https://www.google.com/recaptcha/api.js"></script>
-                        <script>
-
-                        function get_action(crmWebToEntityForm) 
-                        {
-                           var v = grecaptcha.getResponse();
-                           if(v.length == 0)
-                           {
-                              document.getElementById('captcha').innerHTML="You can't leave Captcha Code empty";
-                              return false;
-                           }
-                           else
-                           {
-                                 document.getElementById('captcha').innerHTML="Captcha completed";
-                              return true; 
-                           }
-                        }
-
-                        </script>
+                     
                      <!-- Insert Zoho Webform Code Here -->
                      <div id='crmWebToEntityForm' class='zcwf_lblLeft crmWebToEntityForm'>
                         <form id='webform733929000000446083' action='https://crm.zoho.eu/crm/WebToLeadForm' name='WebToLeads733929000000446083' method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory733929000000446083()' accept-charset='UTF-8'>
@@ -324,6 +306,25 @@
          </section>
       </main>
       <footer class="text-gray-700 body-font bg-gray-200 py-4">
+         <script src="https://www.google.com/recaptcha/api.js"></script>
+                        <script>
+
+                        function get_action(crmWebToEntityForm) 
+                        {
+                           var v = grecaptcha.getResponse();
+                           if(v.length == 0)
+                           {
+                              document.getElementById('captcha').innerHTML="You can't leave Captcha Code empty";
+                              return false;
+                           }
+                           else
+                           {
+                                 document.getElementById('captcha').innerHTML="Captcha completed";
+                              return true; 
+                           }
+                        }
+
+                        </script>
          <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between">
             <p class="text-gray-500 text-center sm:text-left">© 2024 Targeted Services </p>
             <div class="footer-links-icons">
