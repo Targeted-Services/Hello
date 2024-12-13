@@ -14,9 +14,14 @@
       <title>Let's Talk - Targeted.Services</title>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css">
       <link rel="icon" type="image/png" href="assets/images/favicon.png" />
-      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
       <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-     
+      <script type="text/javascript">
+         var onloadCallback = function() {
+           grecaptcha.render('html_element', {
+             'sitekey' : '6LfJYJoqAAAAAIqlbIBEa1CnCa8cFpzlvDIbXjVE'
+           });
+         };
+       </script>
    
 
       <style>
@@ -162,7 +167,7 @@
                               <p> <label class="" for='privacyTool'>I agree to the <b><a href="privacy-policy.html">privacy policy</a></b>.</label>
                           </p> </div>
                            <div class='zcwf_row'>
-                              <div class="g-recaptcha mb-4" required=""  data-sitekey="6Le-XZoqAAAAAMMs5gTCSPVmxFAeZg1i9bNaSIOl"></div>
+                              <div id="html_element"></div>
                               <button type='submit' class='formsubmit'>Submit</button>
                            </div>
 
@@ -297,7 +302,9 @@
                         <script id='wf_anal' src='https://crm.zohopublic.eu/crm/WebFormAnalyticsServeServlet?rid=273a1ede85a709e4a73c318b14ef7398bd9dc5d4842d3ef86018eddb67734d6d8a12213045603505708c2276130fa10bgidafe09cc54bb445e1d2650067f1eb62183ec05e12ed820742acb449ba3fdfbc52gid2632048cad21f5ed25f62ddcbca52f5b85699d80c392ed182e4e302ed4b59f1bgid59e45f6b6ffb30d2e0472be0ae96eb526d77294c71483ba287c281af2170eb51&tw=8afeb412441993fcade5fb810a4e61423652cd2c9af6c18f535916904d820c19'></script>
                      <!-- Do not remove this --- Analytics Tracking code ends. -->
                            </form>
-                          
+                           <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+                           async defer>
+                       </script>
                      </div>
                   </div>
                </div>
