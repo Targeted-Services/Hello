@@ -117,11 +117,24 @@
                   </div>
                   <div>
                      <script src="https://www.google.com/recaptcha/api.js"></script>
-                     <script>
-                        function onSubmit(token) {
-                          document.getElementById("crmWebToEntityForm").submit();
+                        <script>
+
+                        function get_action(crmWebToEntityForm) 
+                        {
+                           var v = grecaptcha.getResponse();
+                           if(v.length == 0)
+                           {
+                              document.getElementById('captcha').innerHTML="You can't leave Captcha Code empty";
+                              return false;
+                           }
+                           else
+                           {
+                                 document.getElementById('captcha').innerHTML="Captcha completed";
+                              return true; 
+                           }
                         }
-                      </script>
+
+                        </script>
                      <!-- Insert Zoho Webform Code Here -->
                      <div id='crmWebToEntityForm' class='zcwf_lblLeft crmWebToEntityForm'>
                         <form id='webform733929000000446083' action='https://crm.zoho.eu/crm/WebToLeadForm' name='WebToLeads733929000000446083' method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory733929000000446083()' accept-charset='UTF-8'>
