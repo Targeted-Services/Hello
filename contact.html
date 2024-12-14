@@ -131,7 +131,7 @@
                      
                      <!-- Insert Zoho Webform Code Here -->
                      <div id='crmWebToEntityForm' class='zcwf_lblLeft crmWebToEntityForm'>
-                        <form id='webform733929000000446083' action='https://crm.zoho.eu/crm/WebToLeadForm' name='WebToLeads733929000000446083' method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory733929000000446083()' accept-charset='UTF-8'>
+                        <form id='webform733929000000446083' action='https://crm.zoho.eu/crm/WebToLeadForm' name='WebToLeads733929000000446083' method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory733929000000446083() && validateCaptcha();' accept-charset='UTF-8'>
                            <input type='hidden' name='xnQsjsdp' value='eb697acbabb4ec529b17bc8d8e4c12b8f0263580ee2aca1e8d35fc086c448c51'>
                            <input type='hidden' name='zc_gad' id='zc_gad' value=''>
                            <input type='hidden' name='xmIwtLD' value='deac48d6eda7799d8c659e9de94153214bd5a59a8761aea6ede466faed5fbfa46ca975031024b23f53f14e012b2ca38e'>
@@ -341,5 +341,15 @@
                 <script type="text/javascript">
                   var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode:"siqec00c9aef2c44a7ab0581ff5707e7842039d6947b7124bbcc5e8f4ab69cc357a", values:{},ready:function(){$zoho.salesiq.floatbutton.visible('hide');}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.eu/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);
                 </script>
+                <script>
+                  function validateCaptcha() {
+                      var response = grecaptcha.getResponse();
+                      if (response.length === 0) {
+                          alert("Please verify that you are not a robot.");
+                          return false;
+                      }
+                      return true;
+                  }
+              </script>
    </body>
 </html>
